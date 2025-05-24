@@ -5,7 +5,7 @@ app_name=rabbitmq
 check_root
 
 echo "Please Enter the Password to setup RabbitMQ"
-read -s RABBITMQ_SERVER_PASSWORD
+read -s RABBITMQ_SERVER_PASSWORD #roboshop123
 
 
 cp rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo

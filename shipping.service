@@ -2,7 +2,7 @@
 Description=Shipping Service
 
 [Service]
-User=roboshop
+User=root
 // highlight-start
 Environment=CART_ENDPOINT=cart.pavithra.fun:8080
 Environment=DB_HOST=mysql.pavithra.fun

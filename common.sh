@@ -48,6 +48,17 @@ app_setup(){
     VALIDATE $? "Unzipping the $app_name file"
 }
 
+maven_setup(){
+    dnf install maven -y &>>$LOG_FILE
+    VALIDATE $? "Installing the maven"
+
+    mvn clean package &>>$LOG_FILE
+    VALIDATE $? "Installing the maven dependencies"
+
+    mv target/$app_name-1.0.jar $app_name.jar  &>>$LOG_FILE
+    VALIDATE $? "moving the $app_name jar file to /app folder"
+}
+
 nodejs_Setup(){
     dnf module disable nodejs -y &>>$LOG_FILE
     VALIDATE $? "Disabling the Nodejs"

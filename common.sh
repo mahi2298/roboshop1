@@ -90,6 +90,7 @@ system_setup(){
     systemctl start $app_name
     VALIDATE $? "Starting the $app_name"
 }
+
 VALIDATE(){
     if [ $1 -eq 0 ]
     then

@@ -8,7 +8,7 @@ echo "Please enter root password to setup"
 read -s MYSQL_SERVER_PASSWORD
 
 app_setup
-
+maven_setup
 system_setup
 
 dnf install mysql -y &>>$LOG_FILE

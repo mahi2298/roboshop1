@@ -5,7 +5,6 @@ app_name=mysql
 
 check_root
 
-
 echo "Please enter root password to setup"
 read -s MYSQL_SERVER_PASSWORD    #password:RoboShop@1
 

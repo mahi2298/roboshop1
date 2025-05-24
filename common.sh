@@ -59,6 +59,14 @@ maven_setup(){
     VALIDATE $? "moving the $app_name jar file to /app folder"
 }
 
+python_setup(){
+    dnf install python3 gcc python3-devel -y &>>$LOG_FILE
+    VALIDATE $? "Installing the python3"
+
+    pip3 install -r requirements.txt &>>$LOG_FILE
+    VALIDATE $? "Installing the python dependencies"
+}
+
 nodejs_Setup(){
     dnf module disable nodejs -y &>>$LOG_FILE
     VALIDATE $? "Disabling the Nodejs"

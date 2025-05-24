@@ -83,7 +83,7 @@ nodejs_Setup(){
 
 system_setup(){
     cp $SCRIPT_DIR/$app_name.service /etc/systemd/system/$app_name.service
-    VALIDATE $? "Copying the catalogue service"
+    VALIDATE $? "Copying the $app_name service"
 
     systemctl daemon-reload 
     systemctl enable $app_name &>>$LOG_FILE

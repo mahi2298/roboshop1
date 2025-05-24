@@ -20,3 +20,5 @@ VALIDATE $? "Editing the Mongodb file for remote connection"
 
 systemctl restart mongod &>>$LOG_FILE
 VALIDATE $? "Restarting the MONGODB File"
+
+print_value

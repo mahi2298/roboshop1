@@ -45,7 +45,7 @@ app_setup(){
 
     cd /app 
     unzip /tmp/$app_name.zip
-    VALIDATE $? "Unzipping file"
+    VALIDATE $? "Unzipping the $app_name file"
 }
 
 nodejs_Setup(){

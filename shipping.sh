@@ -27,3 +27,5 @@ fi
 
 systemctl restart $app_name &>>$LOG_FILE
 VALIDATE $? "restarting the $app_name service"
+
+print_value

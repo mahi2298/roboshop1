@@ -3,6 +3,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+USERID=$(id -u)
 LOGS_FOLDER="/var/logs/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 SOURCE_DIR=$1
@@ -10,7 +11,7 @@ DEST_DIR=$2
 DAYS=$(3:-14)
 LOGS_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 mkdir -p $LOGS_FOLDER
-USERID=$(id -u)
+
 if [ $USERID -ne 0 ]
 then 
     echo "ERROR:: Please run the script with root access" | tee -a $LOGS_FILE

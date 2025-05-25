@@ -5,8 +5,7 @@ Y="\e[33m"
 N="\e[0m"
 LOGS_FOLDER="/var/logs/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-SOURCE_DIR=$1
-DEST_DIR=$2
+SOURCE_DIR=/home/ec2-user/app-logs/sourcedir
 LOGS_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 mkdir -p $LOGS_FOLDER
 USERID=$(id -u)

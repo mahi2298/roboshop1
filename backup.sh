@@ -42,7 +42,7 @@ then
     exit 1
 fi
 
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 if [ ! -z $FILES ] # if file is not empty
 then
     echo "Files to Zip are $FILES"

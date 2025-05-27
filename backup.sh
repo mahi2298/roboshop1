@@ -58,7 +58,11 @@ then
             echo "Deleting file: $filepath" | tee -a $LOG_FILE
             rm -rf $filepath
         done <<< $FILES
-    echo "Files zipped successfully $ZIP_FILE"
+        echo -e "Log files older than $DAYS from source directory removed ... $G SUCCESS $N"
+    else
+        echo -e "Zip file creation ... $R FAILURE $N"
+        exit 1
+    fi
 else
     echo -e "No other files found older than 14 days ... $Y SKIPPING $N"
 fi

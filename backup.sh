@@ -8,7 +8,7 @@ LOGS_FOLDER="/var/logs/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 SOURCE_DIR=$1
 DEST_DIR=$2
-DAYS=$(3:-14)
+DAYS=${3:-14}
 LOGS_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 mkdir -p $LOGS_FOLDER
 
@@ -48,5 +48,5 @@ if [ ! -z $FILES ]
 then
     echo "Files to zip are: $FILES"
 else
-    echo "No other files found olfer than 14 days ... $Y SKIPPING $N"
+    echo "No other files found older than 14 days ... $Y SKIPPING $N"
 fi

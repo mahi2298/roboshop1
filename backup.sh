@@ -11,7 +11,7 @@ SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14}
 
-mkdir -p LOGS_FOLDER
+mkdir -p $LOGS_FOLDER
 
 USERID=$(id -u)
 if [ $USERID -ne 0 ]

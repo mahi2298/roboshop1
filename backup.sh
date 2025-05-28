@@ -45,7 +45,7 @@ then
 fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
-if [ ! -z $FILES ] # here -z stands for empty file but we are using ! -z non empty file
+if [ ! -z "$FILES" ] # here -z stands for empty file but we are using ! -z non empty file
 then
     echo "Files to zip are: $FILES"
     TIME_STAMP=$(date +%F-%H-%M-%S)

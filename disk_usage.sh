@@ -3,6 +3,7 @@
 DISK_USAGE=$(df -hT | grep -v Filesystem)
 DISK_THRESHOLD=1
 MSG=""
+IP="http://169.254.169.254/latest/meta-data/local-ipv4"
 while IFS= read line
 do
     USAGE=$(echo $line | awk '{print $6f}' | cut -d "%" -f1)

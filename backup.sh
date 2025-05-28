@@ -49,7 +49,7 @@ if [ ! -z "$FILES" ] # here -z stands for empty file but we are using ! -z non e
 then
     echo "Files to zip are: $FILES"
     TIME_STAMP=$(date +%F-%H-%M-%S)
-    ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
+    ZIP_FILE="$DEST_DIR/app-logs-$TIME_STAMP.zip"
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ $ZIP_FILE
     if [ -f $ZIP_FILE ]
     then

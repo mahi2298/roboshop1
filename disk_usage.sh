@@ -2,7 +2,7 @@
 
 DISK_USAGE=$(df -hT | grep -v Filesystem)
 DISK_THRESHOLD=1
-MSG=" "
+MSG=""
 while IFS= read line
 do
     USAGE=$(echo $line | awk '{print $6f}' | cut -d "%" -f1)

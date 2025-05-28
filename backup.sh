@@ -50,7 +50,7 @@ then
     echo "Files to zip are: $FILES"
     TIME_STAMP=$(date +%F-%H-%M-%S)
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
-    $FILES | zip -@ $ZIP_FILE
+    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ $ZIP_FILE
     if [ -z $ZIP_FILE ]
     then
         echo "Successfully created zip file"

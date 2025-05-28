@@ -8,7 +8,7 @@ free -h
 # Optional: Add usage percentage
 echo
 echo "==== MEMORY USAGE PERCENTAGE ===="
-total=$(free | awk '/^Mem:/ {print $2}')
-used=$(free | awk '/^Mem:/ {print $3}')
+total=$(free -m | grep 'Mem:' | awk '{print $2F}')
+used=$(free -m | grep 'Mem:' | awk '{print $3F}')
 percent=$(awk "BEGIN {printf \"%.2f\", ($used/$total)*100}")
 echo "Used: $used / $total ($percent%)"
